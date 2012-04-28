@@ -1,7 +1,7 @@
 function map(arr, fun){
     var r = [];
     for(var i=0; i<arr.length; i+=1 )
-        arr[i] = fun(arr[i]);
+        r[i] = fun(arr[i]);
     return r
 }
 
