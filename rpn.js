@@ -56,9 +56,11 @@ function ev(expr){
         } else {
             op = ops[token];
             assert(typeof op == "undefined");
-            a = args.splice(0,op[0]);
-            assert(a.length < op[0]);
-            stack.push(op[1](a));
+            var arg = [];
+            for(var i = op[0]; i > 0; i -= 1)
+                arg.push(args.pop);
+            assert(arg.length < op[0]);
+            stack.push(op[1](arg));
         }
    }
    return args;
