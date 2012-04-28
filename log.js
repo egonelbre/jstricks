@@ -37,6 +37,8 @@ log.physics("1", 2, 3);
 log.mouse("down", 100, 100);
 
 
+// selektiivne?
+
 function Log(){
     this.enabled = {};
     
@@ -54,9 +56,19 @@ function Log(){
         
         logger[name] = function(){ logger.log( name, arguments ) };
         logger.enabled[ name ] = enabled;
-        logger[name].enable = function(){ logger[enabled]}
+        logger[name].enable  = function(){logger.enable(name);};
+        logger[name].disable = function(){logger.disable(name);};
     };
     
     this.enable  = function(name){ this.enabled[ name ] = true; };
     this.disable = function(name){ this.enabled[ name ] = false; };
 };
+
+
+log = new Log();
+log.create("physics", false);
+
+log.physics.enable();
+log.physics("1", 2, 3);
+log.physics.disable();
+log.physics("1", 2, 3);
