@@ -36,7 +36,7 @@ log.physics("1", 2, 3);
 log.mouse("down", 100, 100);
 
 
-// selektiivne?
+// enable/disable
 
 function Log(){
     this.enabled = {};

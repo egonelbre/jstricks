@@ -11,6 +11,9 @@ logToDiv("ctx1", ["alpha", 123, "test"]);
 logToDiv("ctx2", ["alpha", 123, "test"]);
 logToDiv("ctx3", ["alpha", 123, "test"]);
 
+
+// dynamic prototypal logger
+
 function NewLogger( def ) {
     var logger = {},
         tree   = {},
