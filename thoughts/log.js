@@ -1,11 +1,10 @@
-// tavaliselt palju topelt
-// trükkimist...
+// usually too much typing
 log.log("render", 1,2,3)
 log.log("physics", 1,2,3)
 log.log("mouse", 1)
 
-
-// palju mõnusam oleks
+// this would be
+// much nicer
 log.render(1,2,3);
 log.physics(1,2,3);
 log.mouse(1,2,3);

@@ -1,7 +1,9 @@
+myFunction = function(a,b,c){
+	b = a * c + b;
+	return a + b + c;
+}
 
-
-
-// ja debugima hakates
+// and when we start debugging
 
 myFunction = function(a,b,c){
 	console.log("enter:", a,b,c);
