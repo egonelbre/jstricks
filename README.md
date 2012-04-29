@@ -18,7 +18,7 @@ For the examples there are also folders:
 
 * rpn : RPN Calculator
 
-If you have any similar closure/functinoal implementations for those send them along.
+If you have any similar implementations in other languages then send them along.
 
 
 egon
