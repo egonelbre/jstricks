@@ -1,27 +1,12 @@
 function Log(){
     this.enabled = {};
-    
-    this.log = function( name, data ){
-        if( this.enabled[ name ] ){
-            console.log( name, ": ", data );
-        }
-    };
-    
-    this.create = function(name, enabled){
-        var name = name,
-            logger = this;
-        if( typeof this[ name ] !== "undefined" )
-            throw "Cannot use name : " + name + ". Already in use.";
-        
-        logger[name] = function(){ logger.log( name, arguments ) };
-        logger.enabled[ name ] = enabled;
-        logger[name].enable  = function(){ logger.enable(name);  };
-        logger[name].disable = function(){ logger.disable(name); };
-    };
-    
-    this.enable  = function(name){ this.enabled[ name ] = true; };
-    this.disable = function(name){ this.enabled[ name ] = false; };
 };
+
+Log.prototype.log = function(name, data){
+    if( this.enabled[ name ] ){
+        console.log( name, ": ", data );
+    }
+}
 
 Log.prototype.create = function(name, enabled){
     var logger = this;
