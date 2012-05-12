@@ -3,7 +3,9 @@ function Machine(){
 }
 
 Machine.prototype.update = function() {
-	this.next && this.next(m);
+	if(this.next){
+		this.next(this);
+	}
 };
 
 tick = function(m){
